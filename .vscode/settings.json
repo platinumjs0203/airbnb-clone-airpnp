@@ -1,0 +1,21 @@
+{
+  "python.pythonPath": "/home/ayajs/.local/share/virtualenvs/airbnb-clone-i27EgjNI/bin/python",
+  "python.linting.pylintEnabled": false,
+  "python.linting.flake8Enabled": true,
+  "python.linting.enabled": true,
+  "python.formatting.provider": "black",
+  "editor.formatOnSave": true,
+"python.linting.flake8Args": [
+    "max--line-length=88"
+],
+"editor.defaultFormatter": "ms-python.python",
+"launch": {
+
+
+    "configurations": [],
+    "compounds": []
+},
+"editor.tokenColorCustomizations": {
+    "comments": "#fab1a0" 
+}
+}
