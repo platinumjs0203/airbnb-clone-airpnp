@@ -25,7 +25,7 @@ SECRET_KEY = "+2n+4uvch-pj43ywno3*p$(r9f5=pz+_9u-5%^+b_#-x+jlf5)"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = "*"
 
 
 # Application definition
@@ -39,7 +39,7 @@ DJANGO_APPS = [
     "django.contrib.staticfiles",
 ]
 
-THIRD_PARTY_APPS = ["django_countries"]
+THIRD_PARTY_APPS = ["django_countries", "django_seed"]
 
 PROJECT_APPS = [
     "core.apps.CoreConfig",
@@ -68,7 +68,7 @@ ROOT_URLCONF = "config.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [os.path.join(BASE_DIR, "templates")],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -134,3 +134,7 @@ USE_TZ = True
 STATIC_URL = "/static/"
 
 AUTH_USER_MODEL = "users.User"
+
+MEDIA_ROOT = os.path.join(BASE_DIR, "uploads")
+
+MEDIA_URL = "/media/"
