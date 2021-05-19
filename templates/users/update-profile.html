@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block page_title %}
-    Log In
+    Update Profile
 {% endblock page_title %}
 
 {% block search_bar %}
@@ -12,12 +12,11 @@
         {% include "partials/social_login.html" %}
 
         
-        {% include 'mixins/auth/auth_form.html' with form=form cta="Log in" %}
+        {% include 'mixins/auth/auth_form.html' with form=form cta="Update Profile" %}
            
 
         <div class="mt-5">
-            <span class="mr-2">Don't have an account?</span>
-            <a href="{%url 'users:signup'%}" class="text-red-500 font-bold">Sign Up!</a>
+            <a href="{%url 'users:signup'%}" class="text-red-500 font-bold">Change Password</a>
         </div>
         
         
